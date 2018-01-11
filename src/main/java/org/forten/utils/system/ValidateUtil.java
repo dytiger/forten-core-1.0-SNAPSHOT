@@ -54,7 +54,7 @@ public class ValidateUtil {
 	 */
 	public static <T> List<String> validate(T bean) {
 		Set<ConstraintViolation<T>> cvSet = getValidator().validate(bean);
-		List<String> msgList = new ArrayList<String>();
+		List<String> msgList = new ArrayList<>();
 		if (!CollectionUtil.isEmpty(cvSet)) {
 			for (ConstraintViolation<T> cv : cvSet) {
 				msgList.add(cv.getMessage());
@@ -74,7 +74,7 @@ public class ValidateUtil {
 	 */
 	public static <T> void validateThrow(T bean) throws ValidateException {
 		Set<ConstraintViolation<T>> cvSet = getValidator().validate(bean);
-		List<String> msgList = new ArrayList<String>();
+		List<String> msgList = new ArrayList<>();
 		if (!CollectionUtil.isEmpty(cvSet)) {
 			for (ConstraintViolation<T> cv : cvSet) {
 				msgList.add(cv.getMessage());
