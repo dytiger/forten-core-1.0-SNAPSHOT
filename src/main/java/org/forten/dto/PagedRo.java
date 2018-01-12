@@ -10,6 +10,7 @@ public class PagedRo<T> {
 	public PagedRo() {
 		super();
 		this.data = new ArrayList<>(0);
+		this.page = PageInfo.getInstance(1,1,0);
 	}
 
 	public PagedRo(Collection<T> data, PageInfo page) {
