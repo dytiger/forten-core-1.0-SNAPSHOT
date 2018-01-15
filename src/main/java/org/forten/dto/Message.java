@@ -1,12 +1,12 @@
 package org.forten.dto;
 
 public class Message {
-    private String msg;
+    private String messageText;
     private MsgType type;
 
-    private Message(String msg, MsgType type) {
+    private Message(String messageText, MsgType type) {
         super();
-        this.msg = msg;
+        this.messageText = messageText;
         this.type = type;
     }
 
@@ -26,8 +26,8 @@ public class Message {
         return new Message(msg, MsgType.QUESTION);
     }
 
-    public String getMsg() {
-        return msg;
+    public String getMessageText() {
+        return messageText;
     }
 
     public MsgType getType() {
